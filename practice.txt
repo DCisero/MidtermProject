@@ -1,5 +1,9 @@
 Practice
 My name is Jeannette Washington
 My name is Gagan Dhillon
+<<<<<<< HEAD
 My name is Jonathon Branham
 Hello 
+=======
+This is my important code! -GD
+>>>>>>> 64a50a7415a42c2344bdbf934151a99278ec9988
