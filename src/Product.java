@@ -1,62 +1,70 @@
 public class Product {
 
-    private String Name;
-    private String Category;
-    private String Description;
-    private double Price;
+    private String name;
+    private String category;
+    private String description;
+    private double price;
 
 
     public Product() {
-        Name = "";
-        Category = "";
-        Description = "";
-        Price = 0;
+        name = "";
+        category = "";
+        description = "";
+        price = 0;
     }
 
-    public Product(String Name, String Category, String Description, double Price) {
+    public Product(String name, String category, String description, double price) {
 
-
-        this.Name = Name;
-        this.Category = Category;
-        this.Description = Description;
-        this.Price = Price;
+        this.name = name;
+        this.category = category;
+        this.description = description;
+        this.price = price;
     }
 
-    public String getName() {
-        return Name;
+    public String getname() {
+
+        return name;
     }
 
-    public void setName(String Name) {
-        this.Name = Name;
+    public void setname(String name) {
+
+        this.name = name;
     }
 
-    public String getCategory() {
-        return Category;
+    public String getcategory() {
+
+        return category;
     }
 
-    public void setCategory(String Category) {
-        this.Category = Category;
+    public void setcategory(String category) {
+
+        this.category = category;
     }
 
-    public String getDescription() {
-        return Description;
+    public String getdescription() {
+
+        return description;
     }
 
-    public void setDescription(String Description) {
-        this.Description = Description;
+    public void setdescription(String description) {
+
+        this.description = description;
     }
 
-    public double getPrice() {
-        return Price;
+    public double getprice() {
+
+        return price;
     }
 
-    public void setPrice(double price) {
-        this.Price = price;
+    public void setprice(double price) {
+
+        this.price = price;
     }
 
 
     public String toString (){
-        return Name + Category + Description + Price;
+
+        return name + "\t" + category + "\t" + description + "\t" + "$" + price;
     }
 
 }
