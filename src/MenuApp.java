@@ -41,6 +41,8 @@ public class MenuApp {
                         int newmenuInput;
                         int userQuantity;
                         double subTotal = 0;
+                        double tax = 0.0;
+                        double grandTotal = 0.0;
 
                         System.out.print("Please select a menu item: ");
                         menuInput = scan.nextInt();
@@ -64,7 +66,11 @@ public class MenuApp {
                             for (Product pr : cartList) {
                                 double lineTotal = pr.getprice() * userQuantity;
                                 subTotal += lineTotal;
+                                tax = subTotal * 0.06;
+                                grandTotal = subTotal + tax;
+
                                 System.out.println("\n" + pr.getname() + " x" + userQuantity + "\t" + lineTotal);
+
 
                             }
                             System.out.println("Subtotal: " + "$" + subTotal);
@@ -72,7 +78,12 @@ public class MenuApp {
 
                             System.out.println("Select another item? (y/n) ");
                             userAnswer = scan.next();
+
+                            if (userAnswer.equalsIgnoreCase("n")){
+                                System.out.println("\n" + "Tax: " + tax + "\n" + "Grandtotal: " + "$" + grandTotal);
+
                         }
+                    }
                     }
                 }
             }
