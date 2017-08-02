@@ -5,10 +5,11 @@ public class MenuApp {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
         ArrayList<Product> cartList = new ArrayList<Product>();
         Inventory inventory = new Inventory();
         String userAnswer = "y";
+        String paymentInput = "";
+        String creditCardInput = "";
 
         System.out.println("Welcome to Java Beans & Bakes!");
         System.out.println();
@@ -41,49 +42,60 @@ public class MenuApp {
                         int newmenuInput;
                         int userQuantity;
                         double subTotal = 0;
+<<<<<<< HEAD
                         double tax = 0.0;
                         double grandTotal = 0.0;
                         int totalQuantity = 0;
                         String payType = "";
+=======
+
+>>>>>>> cf660b046d358b5a67fd9f3f5685355bd20a059f
 
                         System.out.print("Please select a menu item: ");
                         menuInput = scan.nextInt();
                         newmenuInput = menuInput - 1;
                         scan.nextLine();
 
-                        System.out.println(inventoryList.get(newmenuInput));
-                        System.out.println();
-
                         System.out.print("Choose your quantity (1-5): ");
                         userQuantity = scan.nextInt();
                         System.out.println();
 
                         if (userQuantity < 6) {
+                            System.out.println(inventoryList.get(newmenuInput));
                             Product item = inventoryList.get(newmenuInput);
                             cartList.add(item);
 
                             Product order = new Product();
                             System.out.println("Customer Cart: ");
-
+                            ;
                             for (Product pr : cartList) {
                                 double lineTotal = pr.getprice() * userQuantity;
                                 subTotal += lineTotal;
+<<<<<<< HEAD
                                 tax = subTotal * 0.06;
                                 grandTotal = subTotal + tax;
                                 totalQuantity += userQuantity;
 
                                 System.out.println("\n" + pr.getname() + "\t");
-
+=======
+                                System.out.println("\n" + pr.getname() + " x" + userQuantity + "\t" + lineTotal);
+>>>>>>> cf660b046d358b5a67fd9f3f5685355bd20a059f
 
                             }
+<<<<<<< HEAD
                             System.out.println();
                             System.out.println("Quantity Total: " + totalQuantity);
 
                             System.out.println("Sub Total: " + "$" + subTotal);
+=======
+                            System.out.println(subTotal);
+
+>>>>>>> cf660b046d358b5a67fd9f3f5685355bd20a059f
                             System.out.println();
 
                             System.out.println("Select another item? (y/n) ");
                             userAnswer = scan.next();
+<<<<<<< HEAD
 
                         }
                         if (userAnswer.equalsIgnoreCase("n")){
@@ -109,11 +121,33 @@ public class MenuApp {
 
                             System.out.println("Thank you for ordering. Enjoy!");
                     }
+=======
+                            scan.nextLine();
+                        }
+
+>>>>>>> cf660b046d358b5a67fd9f3f5685355bd20a059f
                     }
                 }
             }
-
-
         } while (userAnswer.equalsIgnoreCase("y"));
+
+        System.out.println("What payment method would you like to use? Cash/Card/PayPal: ");
+        paymentInput = scan.nextLine();
+
+
+        if (paymentInput.equalsIgnoreCase("Card")){
+
+            PaymentMethod.creditCard();
+        }
+        if (paymentInput.equalsIgnoreCase("paypal")){
+
+            PaymentMethod.payPal();
+        }
+
+
+
+
+
+
     }
 }
