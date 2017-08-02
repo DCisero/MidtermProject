@@ -1,9 +1,9 @@
 Drip Coffee	Coffee	Rich Bold	2
 Mocha Latte	Coffee	Creamy Chocolate	4
 Cappuccino	Coffee	Sweet Bold	3
-Frappucino	Coffee	Sweet Bold	5
+Frappuccino	Coffee	Sweet Bold	5
 Green Tea	Tea	Refreshing	3
-Chai Ta	Tea	Spicy	3
+Chai Tea	Tea	Spicy	3
 Hibiscus Tea	Tea	Tart	3
 Earl Grey	Tea	Rich 	3
 BlueBerry Scone	Baked Goods	Buttery Tart	3

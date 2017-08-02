@@ -43,6 +43,8 @@ public class MenuApp {
                         double subTotal = 0;
                         double tax = 0.0;
                         double grandTotal = 0.0;
+                        int totalQuantity = 0;
+                        String payType = "";
 
                         System.out.print("Please select a menu item: ");
                         menuInput = scan.nextInt();
@@ -68,21 +70,44 @@ public class MenuApp {
                                 subTotal += lineTotal;
                                 tax = subTotal * 0.06;
                                 grandTotal = subTotal + tax;
+                                totalQuantity += userQuantity;
 
-                                System.out.println("\n" + pr.getname() + " x" + userQuantity + "\t" + lineTotal);
+                                System.out.println("\n" + pr.getname() + "\t");
 
 
                             }
-                            System.out.println("Subtotal: " + "$" + subTotal);
+                            System.out.println();
+                            System.out.println("Quantity Total: " + totalQuantity);
+
+                            System.out.println("Sub Total: " + "$" + subTotal);
                             System.out.println();
 
                             System.out.println("Select another item? (y/n) ");
                             userAnswer = scan.next();
 
-                            if (userAnswer.equalsIgnoreCase("n")){
-                                System.out.println("\n" + "Tax: " + tax + "\n" + "Grandtotal: " + "$" + grandTotal);
-
                         }
+                        if (userAnswer.equalsIgnoreCase("n")){
+                            System.out.println("\n" + "Tax: " + tax + "\n" + "Grand Total: " + "$" + grandTotal);
+
+                            System.out.print("Choose a payment option (Cash, Credit, PayPal): ");
+                            payType.equalsIgnoreCase(scan.next());
+
+                            if(payType == "cash") {
+
+                            }
+                            if (payType == "credit"){
+
+                            }
+                            else{
+
+                            }
+                            System.out.println();
+                            System.out.println("Customer Receipt: " + "\n" + "Cart Items: " + cartList + "\n"
+                                   + "Sub Total: "+ "$"+ subTotal + "\n" + "Grand Total: " + "$" + grandTotal +
+                                    "\n" + "Payment Information: " + payType);
+                            System.out.println();
+
+                            System.out.println("Thank you for ordering. Enjoy!");
                     }
                     }
                 }

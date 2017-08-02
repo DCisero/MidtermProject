@@ -29,19 +29,19 @@ public class Inventory {
                         break;
                     }
 
-                    //take the first item and put it into the car's Make
+                    //take the first item and put it into the Product's name
                     String Name = details[0];
-                    //take the second item and put into car's Model
+                    //take the second item and put into Product's Category
                     String Category = details[1];
-                    //take the third item, turn it into an int, put into Year
+                    //take the third item and put into Product's Description
                     String Description = details[2];
                     //take the fourth item, turn it to double, put into Price
                     double Price = Double.parseDouble(details[3]);
 
-                    //construct a new Car object from this data
+                    //construct a new Product object from the previous data
                     Product c = new Product(Name, Category, Description, Price);
 
-                    //add the new Car into ArrayList
+                    //add the new Product into an ArrayList
                     inventoryList.add(c);
 
                     //read in the next line for the next iteration
