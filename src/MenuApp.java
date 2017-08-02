@@ -5,6 +5,7 @@ public class MenuApp {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
+
         ArrayList<Product> cartList = new ArrayList<Product>();
         Inventory inventory = new Inventory();
         String userAnswer = "y";
@@ -46,35 +47,37 @@ public class MenuApp {
                         newmenuInput = menuInput - 1;
                         scan.nextLine();
 
+                        System.out.println(inventoryList.get(newmenuInput));
+                        System.out.println();
+
                         System.out.print("Choose your quantity (1-5): ");
                         userQuantity = scan.nextInt();
                         System.out.println();
 
                         if (userQuantity < 6) {
-                            System.out.println(inventoryList.get(newmenuInput));
                             Product item = inventoryList.get(newmenuInput);
                             cartList.add(item);
 
-                            System.out.println();
                             Product order = new Product();
+                            System.out.println("Customer Cart: ");
+
                             for (Product pr : cartList) {
-
-                                subTotal = pr.getPrice() * userQuantity;
-
-                                System.out.println("Customer Cart: " + "\n" + pr.getName() + " x" + userQuantity +
-                                        "\n" + "Subtotal: " + subTotal);
+                                double lineTotal = pr.getprice() * userQuantity;
+                                subTotal += lineTotal;
+                                System.out.println("\n" + pr.getname() + " x" + userQuantity + "\t" + lineTotal);
 
                             }
-
+                            System.out.println("Subtotal: " + "$" + subTotal);
                             System.out.println();
 
                             System.out.println("Select another item? (y/n) ");
                             userAnswer = scan.next();
                         }
-
                     }
                 }
             }
-        }  while (userAnswer.equalsIgnoreCase("y"));
+
+
+        } while (userAnswer.equalsIgnoreCase("y"));
     }
 }
