@@ -5,10 +5,11 @@ public class MenuApp {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-
         ArrayList<Product> cartList = new ArrayList<Product>();
         Inventory inventory = new Inventory();
         String userAnswer = "y";
+        String paymentInput = "";
+        String creditCardInput = "";
 
         System.out.println("Welcome to Java Beans & Bakes!");
         System.out.println();
@@ -41,54 +42,62 @@ public class MenuApp {
                         int newmenuInput;
                         int userQuantity;
                         double subTotal = 0;
-                        double tax = 0.0;
-                        double grandTotal = 0.0;
+
 
                         System.out.print("Please select a menu item: ");
                         menuInput = scan.nextInt();
                         newmenuInput = menuInput - 1;
                         scan.nextLine();
 
-                        System.out.println(inventoryList.get(newmenuInput));
-                        System.out.println();
-
                         System.out.print("Choose your quantity (1-5): ");
                         userQuantity = scan.nextInt();
                         System.out.println();
 
                         if (userQuantity < 6) {
+                            System.out.println(inventoryList.get(newmenuInput));
                             Product item = inventoryList.get(newmenuInput);
                             cartList.add(item);
 
                             Product order = new Product();
                             System.out.println("Customer Cart: ");
-
+                            ;
                             for (Product pr : cartList) {
                                 double lineTotal = pr.getprice() * userQuantity;
                                 subTotal += lineTotal;
-                                tax = subTotal * 0.06;
-                                grandTotal = subTotal + tax;
-
                                 System.out.println("\n" + pr.getname() + " x" + userQuantity + "\t" + lineTotal);
 
-
                             }
-                            System.out.println("Subtotal: " + "$" + subTotal);
+                            System.out.println(subTotal);
+
                             System.out.println();
 
                             System.out.println("Select another item? (y/n) ");
                             userAnswer = scan.next();
-
-                            if (userAnswer.equalsIgnoreCase("n")){
-                                System.out.println("\n" + "Tax: " + tax + "\n" + "Grandtotal: " + "$" + grandTotal);
-
+                            scan.nextLine();
                         }
-                    }
+
                     }
                 }
             }
-
-
         } while (userAnswer.equalsIgnoreCase("y"));
+
+        System.out.println("What payment method would you like to use? Cash/Card/PayPal: ");
+        paymentInput = scan.nextLine();
+
+
+        if (paymentInput.equalsIgnoreCase("Card")){
+
+            PaymentMethod.creditCard();
+        }
+        if (paymentInput.equalsIgnoreCase("paypal")){
+
+            PaymentMethod.payPal();
+        }
+
+
+
+
+
+
     }
 }
