@@ -1,6 +1,3 @@
-/**
- * Created by D.Cisero on 7/31/17.
- */
 import java.util.ArrayList;
 import java.io.BufferedReader;
 import java.io.File;
