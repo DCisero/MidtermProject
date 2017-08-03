@@ -74,7 +74,6 @@ public class MenuApp {
 
                                 System.out.println("\n" + pr.getName() + "\t");
 
-
                             }
                             System.out.println();
                             System.out.println("Quantity Total: " + totalQuantity);
