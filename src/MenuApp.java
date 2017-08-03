@@ -31,8 +31,8 @@ public class MenuApp {
                         //enhanced for (foreach) to go through list
                         for (Product c : inventoryList) {
                             //toString does the formatting
-                            System.out.println(i + ":" + c);
-                            i++;
+                            System.out.println(c);
+                            //i++;
                         }
 
                         System.out.println();
@@ -66,13 +66,13 @@ public class MenuApp {
                             System.out.println("Customer Cart: ");
 
                             for (Product pr : cartList) {
-                                double lineTotal = pr.getprice() * userQuantity;
+                                double lineTotal = pr.getPrice() * userQuantity;
                                 subTotal += lineTotal;
                                 tax = subTotal * 0.06;
                                 grandTotal = subTotal + tax;
                                 totalQuantity += userQuantity;
 
-                                System.out.println("\n" + pr.getname() + "\t");
+                                System.out.println("\n" + pr.getName() + "\t");
 
 
                             }

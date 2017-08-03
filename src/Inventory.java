@@ -10,51 +10,52 @@ public class Inventory {
     public static ArrayList<Product> readFile(String filename) {
         ArrayList<Product> inventoryList = new ArrayList<Product>();
 
-            try {
-                Path inventoryPath = Paths.get(filename);
-                File inventoryFile = inventoryPath.toFile();
-                FileReader fileRdr = new FileReader(inventoryFile);
-                BufferedReader in = new BufferedReader(fileRdr);
+        try {
+            Path inventoryPath = Paths.get(filename);
+            File inventoryFile = inventoryPath.toFile();
+            FileReader fileRdr = new FileReader(inventoryFile);
+            BufferedReader in = new BufferedReader(fileRdr);
 
-                //read in the first line
-                String line = in.readLine();
+            //read in the first line
+            String line = in.readLine();
 
-                //as long as there's another line
-                while (line != null) {
-                    //break the line apart based on tabs
-                    String[] details = line.split("\t");
+            //as long as there's another line
+            while (line != null) {
+                //break the line apart based on tabs
+                String[] details = line.split("\t");
 
-                    if (details.length < 4) {
-                        System.out.println("Bad line format--halting read");
-                        break;
-                    }
-
-                    //take the first item and put it into the Product's name
-                    String Name = details[0];
-                    //take the second item and put into Product's Category
-                    String Category = details[1];
-                    //take the third item and put into Product's Description
-                    String Description = details[2];
-                    //take the fourth item, turn it to double, put into Price
-                    double Price = Double.parseDouble(details[3]);
-
-                    //construct a new Product object from the previous data
-                    Product c = new Product(Name, Category, Description, Price);
-
-                    //add the new Product into an ArrayList
-                    inventoryList.add(c);
-
-                    //read in the next line for the next iteration
-                    line = in.readLine();
+                if (details.length < 4) {
+                    System.out.println("Bad line format--halting read");
+                    break;
                 }
 
-            } catch (IOException e) {
-                System.out.println(e);
-                return null;
+
+                int itemNumber = Integer.parseInt(details[0]);
+                //take the first item and put it into the car's Make
+                String Name = details[1];
+                //take the second item and put into car's Model
+                String Category = details[2];
+                //take the third item, turn it into an int, put into Year
+                String Description = details[3];
+                //take the fourth item, turn it to double, put into Price
+                double Price = Double.parseDouble(details[4]);
+
+                //construct a new Car object from this data
+                Product c = new Product(itemNumber, Name, Category, Description, Price);
+
+                //add the new Car into ArrayList
+                inventoryList.add(c);
+
+                //read in the next line for the next iteration
+                line = in.readLine();
             }
 
-            return inventoryList;
+        } catch (IOException e) {
+            System.out.println(e);
+            return null;
         }
-    }
 
+        return inventoryList;
+    }
+}
 

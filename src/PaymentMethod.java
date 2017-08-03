@@ -30,7 +30,7 @@ public class PaymentMethod {
 
         } while (userCreditCardVerification.equalsIgnoreCase("y") || userCreditCardVerification.equalsIgnoreCase("Y"));
             String totalCreditCardInfo = creditcardInput + cvvNum + userCreditCardVerification;
-            //System.out.println("Thank you for your payment.");
+            System.out.println("Thank you for your payment.");
 
             return (int) creditcardInput;
         }

@@ -1,12 +1,12 @@
-Drip Coffee	Coffee	Rich Bold	2
-Mocha Latte	Coffee	Creamy Chocolate	4
-Cappuccino	Coffee	Sweet Bold	3
-Frappuccino	Coffee	Sweet Bold	5
-Green Tea	Tea	Refreshing	3
-Chai Tea	Tea	Spicy	3
-Hibiscus Tea	Tea	Tart	3
-Earl Grey	Tea	Rich 	3
-BlueBerry Scone	Baked Goods	Buttery Tart	3
-Creamcheese Danish 	Baked Goods	Creamy Sweat	4
-Cinnamon Roll	Baked Goods	Buttery Sweet	4
-Muffin	Baked Goods	Yummy Buttery	2
+1	Drip Coffee	Coffee	Rich Bold	2
+2	Mocha Latte	Coffee	Creamy Chocolate	4
+3	Cappuccino	Coffee	Sweet Bold	3
+4	Frappucino	Coffee	Sweet Bold	5
+5	Green Tea	Tea	Refreshing	3
+6	Chai Ta	Tea	Spicy	3
+7	Hibiscus Tea	Tea	Tart	3
+8	Earl Grey	Tea	Rich 	3
+9	BlueBerry Scone	Baked Goods	Buttery Tart	3
+10	Creamcheese Danish 	Baked Goods	Creamy Sweat	4
+11	Cinnamon Roll	Baked Goods	Buttery Sweet	4
+12	Muffin	Baked Goods	Yummy Buttery	2

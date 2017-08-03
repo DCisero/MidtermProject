@@ -1,70 +1,72 @@
 public class Product {
 
-    private String name;
-    private String category;
-    private String description;
-    private double price;
+    private int itemNumber;
+    private String Name;
+    private String Category;
+    private String Description;
+    private double Price;
 
 
     public Product() {
-        name = "";
-        category = "";
-        description = "";
-        price = 0;
+        itemNumber = 0;
+        Name = "";
+        Category = "";
+        Description = "";
+        Price = 0;
     }
 
-    public Product(String name, String category, String description, double price) {
+    public Product(int itemNumber, String Name, String Category, String Description, double Price) {
 
-        this.name = name;
-        this.category = category;
-        this.description = description;
-        this.price = price;
+
+        this.Name = Name;
+        this.Category = Category;
+        this.Description = Description;
+        this.Price = Price;
+        this.itemNumber = itemNumber;
     }
 
-    public String getname() {
+    public int getItemNumberM() {return itemNumber;}
+    public void setItemNumberM(int itemNumberM) { this.itemNumber = itemNumberM;}
 
-        return name;
+    public String getName() {
+        return Name;
     }
 
-    public void setname(String name) {
-
-        this.name = name;
+    public void setName(String Name) {
+        this.Name = Name;
     }
 
-    public String getcategory() {
-
-        return category;
+    public String getCategory() {
+        return Category;
     }
 
-    public void setcategory(String category) {
-
-        this.category = category;
+    public void setCategory(String Category) {
+        this.Category = Category;
     }
 
-    public String getdescription() {
-
-        return description;
+    public String getDescription() {
+        return Description;
     }
 
-    public void setdescription(String description) {
-
-        this.description = description;
+    public void setDescription(String Description) {
+        this.Description = Description;
     }
 
-    public double getprice() {
-
-        return price;
+    public double getPrice() {
+        return Price;
     }
 
-    public void setprice(double price) {
-
-        this.price = price;
+    public void setPrice(double price) {
+        this.Price = price;
     }
 
 
-    public String toString (){
+    public String toString() {
 
-        return name + "\t" + category + "\t" + description + "\t"+ "$" + price;
+        String result = "";
+
+        System.out.printf("\"%-2d %-20s %-13s %-18s %.2f", itemNumber, Name, Category, Description, Price);
+
+        return result;
     }
-
 }
