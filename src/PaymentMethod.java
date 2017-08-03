@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class PaymentMethod {
@@ -23,14 +24,12 @@ public class PaymentMethod {
             System.out.print("Is the the credit card information correct? Y/N: ");
             userCreditCardVerification = scan.nextLine();
 
-            if(userCreditCardVerification.equalsIgnoreCase("n")) {
-                System.out.println("Error with validation, please try again.");
-                break;
+            if (userCreditCardVerification.equalsIgnoreCase("y") || userCreditCardVerification.equalsIgnoreCase("Y")) {
+                String totalCreditCardInfo = creditcardInput + cvvNum + userCreditCardVerification;
+                System.out.println("Thank you for your payment.");
             }
 
-        } while (userCreditCardVerification.equalsIgnoreCase("y") || userCreditCardVerification.equalsIgnoreCase("Y"));
-            String totalCreditCardInfo = creditcardInput + cvvNum + userCreditCardVerification;
-            System.out.println("Thank you for your payment.");
+        } while (userCreditCardVerification.equalsIgnoreCase("n"));
 
             return (int) creditcardInput;
         }
@@ -70,5 +69,7 @@ public class PaymentMethod {
         } while (somthing == 1) ;
         return null;
     }
+
+
 
 }

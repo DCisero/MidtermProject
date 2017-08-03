@@ -25,38 +25,51 @@ public class Product {
         this.itemNumber = itemNumber;
     }
 
-    public int getItemNumberM() {return itemNumber;}
-    public void setItemNumberM(int itemNumberM) { this.itemNumber = itemNumberM;}
+    public int getItemNumber() {
+
+        return itemNumber;
+    }
+    public void setItemNumber(int itemNumber) {
+        this.itemNumber = itemNumber;
+    }
 
     public String getName() {
+
         return Name;
     }
 
     public void setName(String Name) {
+
         this.Name = Name;
     }
 
     public String getCategory() {
+
         return Category;
     }
 
     public void setCategory(String Category) {
+
         this.Category = Category;
     }
 
     public String getDescription() {
+
         return Description;
     }
 
     public void setDescription(String Description) {
+
         this.Description = Description;
     }
 
     public double getPrice() {
+
         return Price;
     }
 
     public void setPrice(double price) {
+
         this.Price = price;
     }
 

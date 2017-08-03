@@ -32,7 +32,7 @@ public class MenuApp {
                         for (Product c : inventoryList) {
                             //toString does the formatting
                             System.out.println(c);
-                            //i++;
+
                         }
 
                         System.out.println();
@@ -86,8 +86,9 @@ public class MenuApp {
                             userAnswer = scan.next();
 
                         }
-                        if (userAnswer.equalsIgnoreCase("n")){
+                        if (userAnswer.equalsIgnoreCase("n")) {
                             System.out.println("\n" + "Tax: " + tax + "\n" + "Grand Total: " + "$" + grandTotal);
+                        }
 
                             System.out.print("Choose a payment option (Card, PayPal, Cash): ");
                             payType = scan.next();
@@ -95,30 +96,28 @@ public class MenuApp {
                             if (payType.equalsIgnoreCase("Card")){
 
                                 PaymentMethod.creditCard();
-                                    return;
 
                             }
                             if (payType.equalsIgnoreCase("paypal")){
 
                                 PaymentMethod.payPal();
                             }
-                            else{
-                                //cash payment method goes here
+                            if(payType.equalsIgnoreCase("Cash")){
+                                //PaymentMethod.calculateChange();
                             }
-
                             System.out.println();
-                            System.out.println("Customer Receipt: " + "\n" + "Cart Items: " + cartList + "\n"
+                            System.out.println("Customer Receipt: ");
+                            System.out.println(cartList + "\n"
                                    + "Sub Total: "+ "$"+ subTotal + "\n" + "Grand Total: " + "$" + grandTotal +
                                     "\n" + "Payment Information: " + payType);
-                            System.out.println();
 
                             System.out.println("Thank you for ordering. Enjoy!");
+                            System.out.println();
                     }
                     }
                 }
-            }
+            } while (userAnswer.equalsIgnoreCase("y"));
 
 
-        } while (userAnswer.equalsIgnoreCase("y"));
+        }
     }
-}

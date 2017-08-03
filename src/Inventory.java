@@ -25,25 +25,25 @@ public class Inventory {
                 String[] details = line.split("\t");
 
                 if (details.length < 4) {
-                    System.out.println("Bad line format--halting read");
+                    System.out.println("Error in line format, unable to read file");
                     break;
                 }
 
 
                 int itemNumber = Integer.parseInt(details[0]);
-                //take the first item and put it into the car's Make
+                //take the first item and put it into the Product's Name
                 String Name = details[1];
-                //take the second item and put into car's Model
+                //take the second item and put into Product's Category
                 String Category = details[2];
-                //take the third item, turn it into an int, put into Year
+                //take the third item put into Product's Description
                 String Description = details[3];
-                //take the fourth item, turn it to double, put into Price
+                //take the fourth item, turn it to double, put into Product's Price
                 double Price = Double.parseDouble(details[4]);
 
-                //construct a new Car object from this data
+                //construct a new Product object from this data
                 Product c = new Product(itemNumber, Name, Category, Description, Price);
 
-                //add the new Car into ArrayList
+                //add the new Product into the ArrayList
                 inventoryList.add(c);
 
                 //read in the next line for the next iteration
