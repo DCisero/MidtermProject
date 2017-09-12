@@ -66,42 +66,5 @@ public class PaymentMethod {
         } while (somthing == 1) ;
         return null;
     }
-//    public Double calculateChange(double cash, BigDecimal totalBill) {
-//
-//        changeDue = 0;
-//
-//        Double cashAmount = Double.valueOf(cash);
-//
-//        if (cashAmount.compareTo(totalBill) == 1 || cashAmount.compareTo(totalBill) == 0)
-//            changeDue = totalBill.subtract();
-//
-//        return changeDue;
-//
-//    }
-//
-//    public boolean validCashForChange(double cash, BigDecimal totalBill) {
-//
-//        BigDecimal cashAmount = BigDecimal.valueOf(cash);
-//
-//        boolean valid;
-//
-//        if (cashAmount.compareTo(totalBill) == 1 || cashAmount.compareTo(totalBill) == 0) {
-//
-//            valid = false;
-//
-//        }
-//
-//        else {
-//
-//            System.out.println("That is not enough cash, please add more money or try different pay method.");
-//
-//            valid = true;
-//
-//        }
-//
-//        return valid;
-//
-//    }
-
 
 }

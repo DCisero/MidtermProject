@@ -101,9 +101,7 @@ public class MenuApp {
 
                                 PaymentMethod.payPal();
                             }
-                            if(payType.equalsIgnoreCase("Cash")){
-                                //PaymentMethod.calculateChange();
-                            }
+                            
                             System.out.println();
                             System.out.println("Customer Receipt: ");
                             System.out.println(cartList + "\n"
